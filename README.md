@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Rails Capstone</b></h3>
+  <h3><b>Budget Tracker</b></h3>
 
 </div>
 
@@ -36,7 +36,8 @@
 
 # 📖 Rails Capstone <a name="about-project"></a>
 
-> Rails Capstone is a web application. You can add categories and many transactions for that categories.
+> Budget Tracker is a web application that allows users to add categories and add expenses to the  transactions.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -75,7 +76,8 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [https://sohaib-budget.onrender.com]
+- <a href="https://sohaib-budget.onrender.com">Live Demo</a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
