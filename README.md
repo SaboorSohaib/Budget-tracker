@@ -107,8 +107,8 @@ Clone this repository to your desired folder:
 ```
  - mkdir my-folder
  - cd my-folder
- - git clone git@github.com:SaboorSohaib/Rails-Capstone.git
- - cd Blog-app
+ - git clone git@github.com:SaboorSohaib/Budget-tracker.git
+ - cd Budget-tracker
  - bundle install
  - rails db:create
  - rails db:migrate
