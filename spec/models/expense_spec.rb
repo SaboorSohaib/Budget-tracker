@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   subject do
     @user = User.create!(name: 'omar', email: 'omar@gmail.com', password: '934043')
-    @expnse =  Expense.create!(name: 'Expense 1', amount: 100, author_id: @user.id)
+    @expnse = Expense.create!(name: 'Expense 1', amount: 100, author_id: @user.id)
   end
 
   it 'should test the name attribute' do
@@ -25,7 +25,7 @@ RSpec.describe Expense, type: :model do
     subject.amount = -1
     expect(subject).to_not be_valid
   end
-  
+
   it 'should test the amount to be an integer' do
     subject.amount = 1.5
     expect(subject).to_not be_valid
