@@ -1,5 +1,5 @@
 class Expense < ApplicationRecord
-    belongs_to :user
+    belongs_to :user, optional: true
     has_many :group_expenses
     has_many :groups, through: :group_expenses
     validates :name, presence: true, length: { maximum: 50 }
