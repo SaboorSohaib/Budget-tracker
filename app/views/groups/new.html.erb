@@ -1,0 +1,17 @@
+<div>
+    <%= link_to "Back", authenticated_root_path %>
+    <h2>Add a New Category </h2>
+    <%= form_with model: @group, url: groups_path do |form| %>
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
+        <div>
+            <%= form.label :icon %>
+            <%= form.text_field :icon %>
+        </div>
+        <div>
+            <%= form.submit "Save" %>
+        </div>
+    <% end %>
+</div>

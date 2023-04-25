@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
+  before_action :set_user
   def index
-    @groups = current_user.groups
+    @groups = @user.groups
   end
 
   def show
@@ -17,7 +18,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.author = current_user
+    @group.user = @user
     if @group.save
       redirect_to groups_path
     else
@@ -28,4 +29,10 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon)
   end
+end
+
+private
+
+def set_user
+  @user = current_user
 end

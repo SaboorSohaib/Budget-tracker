@@ -1,12 +1,13 @@
 class ExpensesController < ApplicationController
+  before_action :set_user
   def index
-    @groups = current_user.groups
+    @groups = @user.groups
     @group = @groups.find(params[:group_id])
     @expenses = @group.expenses
   end
 
   def new
-    @groups = current_user.groups
+    @groups = @user.groups
     @group = @groups.find(params[:group_id])
     @expense = Expense.new
   end
@@ -14,7 +15,7 @@ class ExpensesController < ApplicationController
   def create
     @group = @groups.find(params[:group_id])
     @expense = Expense.new(expense_params)
-    @expense.user = current_user
+    @expense.author = @user
     if @expense.save
       GroupExpense.create(group: @group, expense: @expense)
       redirect_to group_expenses_path(@group)
@@ -24,8 +25,14 @@ class ExpensesController < ApplicationController
   end
 
   private
-  
+
   def expense_params
     params.require(:expense).permit(:name, :amount)
   end
+end
+
+private
+
+def set_user
+  @user = current_user
 end
