@@ -15,15 +15,14 @@
       <div><img src="<% @group.icon %>"></div>
     </div>
     <div>
-      <p>Total Amount: </p>
-      <div><%= @group.group_expenses.sum { |ge| ge.group.amount } %> $</div>
+      <div>Total Amount: <%= @group.expenses.sum(:amount) %> $</div>
     </div>
 
     <div>
       <% @expenses.order(created_at: :desc).each do |expense| %>
         <div>
-          <div><%= expense.name %></div>
-          <div>$ <%= expense.amount %></div>
+          <div>Transaction Name: <%= expense.name %></div>
+          <div>Transaction Amount: <%= expense.amount %>$</div>
         </div>
       <% end %>
     </div>
