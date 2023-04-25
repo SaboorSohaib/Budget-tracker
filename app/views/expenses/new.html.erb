@@ -1,4 +1,5 @@
 <div>
+  <%= link_to "Back", authenticated_root_path%>
   <h2>Add a New Transaction</h2>
     <%= form_with model: @expense, url: group_expenses_path(params[:group_id]) do |form| %>
       <div>

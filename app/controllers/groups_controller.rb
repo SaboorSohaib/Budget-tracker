@@ -26,13 +26,13 @@ class GroupsController < ApplicationController
     end
   end
 
+  private
+  
   def group_params
     params.require(:group).permit(:name, :icon)
   end
-end
 
-private
-
-def set_user
-  @user = current_user
+  def set_user
+    @user = current_user
+  end
 end

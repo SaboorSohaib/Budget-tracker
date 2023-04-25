@@ -15,8 +15,8 @@
       <div><img src="<% @group.icon %>"></div>
     </div>
     <div>
-      <p>Total Amount</p>
-      <div><%= @group.group_expenses.sum { |ge| ge.group.amount } %></div>
+      <p>Total Amount: </p>
+      <div><%= @group.group_expenses.sum { |ge| ge.group.amount } %> $</div>
     </div>
 
     <div>
@@ -25,10 +25,11 @@
           <div><%= expense.name %></div>
           <div>$ <%= expense.amount %></div>
         </div>
+      <% end %>
     </div>
   </div>
 
     <div>
         <%= link_to 'Add a New Transaction', new_group_expense_path(params[:group_id]) %>
     </div>
-<div>
+</div>
