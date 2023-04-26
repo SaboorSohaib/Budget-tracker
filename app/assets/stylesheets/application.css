@@ -12,5 +12,25 @@
  *
  *= require_tree .
  *= require_self
- *= require font-awesome
  */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    width: 40vw;
+    height: 100vh;
+  }
+
+  .child{
+    border: 3px solid rgb(204, 204, 204);
+    padding: 3rem;
+    border-radius: 5px;
+  }
+
