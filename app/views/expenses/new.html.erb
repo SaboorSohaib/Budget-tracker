@@ -1,0 +1,21 @@
+<div>
+  <%= link_to "Back", authenticated_root_path%>
+  <h2>Add a New Transaction</h2>
+    <%= form_with model: @expense, url: group_expenses_path(params[:group_id]) do |form| %>
+      <div>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      <div>
+        <%= form.label :amount %>
+        <%= form.number_field :amount %>
+      </div>
+      <div>
+        <%= form.label :group_id %>
+        <%= form.select :group_id, options_from_collection_for_select(@groups, :id, :name) %>
+      </div>
+      <div>
+        <%= form.submit "Save" %>
+      </div>
+    <% end %>
+</div>

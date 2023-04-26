@@ -1,0 +1,21 @@
+
+<% if user_signed_in? %>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% end %>
+
+<div>
+    <div>
+        <span>You Signed in as: <%= @user.name %></span>
+    </div>
+
+    <div>
+        <% @groups.each do |group| %>
+          <div><%= link_to group.name, group_expenses_path(group) %></div>
+          <img src="<%= group.icon %>">
+          <div><%= group.expenses.sum(:amount) %> $</div>
+        <% end %>
+    </div>
+    <div>
+        <%= link_to 'Add a New Category', new_group_path %>
+    </div>
+</div>
