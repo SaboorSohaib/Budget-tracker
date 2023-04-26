@@ -11,9 +11,8 @@
     <div>
         <% @groups.each do |group| %>
           <div><%= link_to group.name, group_expenses_path(group) %></div>
-          <img src="<%= group.icon %>" >
-          <div>$ <%= group.expenses.sum(:amount) %></div>
-
+          <img src="<%= group.icon %>">
+          <div><%= group.expenses.sum(:amount) %> $</div>
         <% end %>
     </div>
     <div>
