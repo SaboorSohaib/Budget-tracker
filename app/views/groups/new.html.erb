@@ -1,17 +1,22 @@
-<div>
+<div class="container">
+  <div class="child">
     <%= link_to "Back", authenticated_root_path %>
-    <h2>Add a New Category </h2>
+    <div class="text-center">
+      <h2>Add a New Category </h2>
+    </div>
     <%= form_with model: @group, url: groups_path do |form| %>
-        <div>
+        <div class="mb-3">
             <%= form.label :name %>
-            <%= form.text_field :name %>
+            <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
         </div>
-        <div>
-            <%= form.label :icon %>
-            <%= form.file_field :icon %>
-        </div>
-        <div>
-            <%= form.submit "Save" %>
+       <div class="mb-3">
+          <label class="btn btn-primary">
+            Upload an icon <%= form.file_field :icon, style: 'display:none;' %>
+          </label>
+      </div>
+        <div class="mb-3">
+            <%= form.submit "Save", class: "btn btn-primary" %>
         </div>
     <% end %>
+  </div>
 </div>
