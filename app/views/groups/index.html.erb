@@ -12,11 +12,12 @@
         <% @groups.each do |group| %>
           <div class="d-flex flex-row gap-3 border border-primary p-1">
             <div>
-                <img src="<%= group.icon %>">
+                <img src="<%= group.icon %>", alt="group-image", style="width:60px; height:60px;">
             </div>
             <div>
                 <div><%= link_to group.name, group_expenses_path(group) %></div>
                 <div><%= group.expenses.sum(:amount) %> $</div>
+                <div><%= group.created_at.strftime("%d %b %Y") %></div>
             </div>
           </div>
         <% end %>

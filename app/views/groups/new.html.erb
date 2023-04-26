@@ -12,13 +12,12 @@
             <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
         </div>
        <div class="mb-3">
-          <label class="btn btn-primary">
-            Upload an icon <%= form.file_field :icon, style: 'display:none;' %>
-          </label>
+          <%= form.label :icon %>
+          <%= form.text_field :icon, placeholder:'Icon Here!', class:'text-input form-control form-control-lg' %>
       </div>
-        <div class="mb-3">
-            <%= form.submit "Save", class: "btn btn-primary" %>
-        </div>
+      <div class="mb-3">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>

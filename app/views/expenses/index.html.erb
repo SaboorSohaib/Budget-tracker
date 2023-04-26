@@ -14,8 +14,8 @@
     <div class="text-center">
       <h3>Transactions</h3>
     </div>
-    <div>
-      <div class="ms-3">Icon:</div><img src="<% @group.icon %>">
+    <div class="ms-3">
+      Icon:<img src="<%= @group.icon %>", alt="group-image", style="width:60px; height:60px;">
     </div>
     <div class="ms-3 mb-3">
       <h6>Total Amount: <%= @group.expenses.sum(:amount) %> $</h6>
