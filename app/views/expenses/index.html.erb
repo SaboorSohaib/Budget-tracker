@@ -1,26 +1,29 @@
 <div>
-  <div>
-    <%= link_to "Back", authenticated_root_path %>
-  </div>
-
-  <div>
-    <% if user_signed_in? %>
-        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-    <% end %>
-  </div>
-
-  <div>
-    <p>Transactions</p>
-    <div>
-      <div><img src="<% @group.icon %>"></div>
-    </div>
-    <div>
-      <div>Total Amount: <%= @group.expenses.sum(:amount) %> $</div>
+  <div class="d-flex justify-content-between">
+    <div class="ms-2">
+      <%= button_to "Back", authenticated_root_path, method: :get, class: 'btn btn-outline-primary' %>
     </div>
 
+    <div class="mb-3 me-2">
+      <% if user_signed_in? %>
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-primary' %>
+      <% end %>
+    </div>
+  </div>
+  <div>
+    <div class="text-center">
+      <h3>Transactions</h3>
+    </div>
     <div>
+      <div class="ms-3">Icon:</div><img src="<% @group.icon %>">
+    </div>
+    <div class="ms-3 mb-3">
+      <h6>Total Amount: <%= @group.expenses.sum(:amount) %> $</h6>
+    </div>
+
+    <div class="d-flex flex-column gap-2 mb-3 ms-3 me-3">
       <% @expenses.order(created_at: :desc).each do |expense| %>
-        <div>
+        <div class="d-flex flex-column border border-primary p-1">
           <div>Transaction Name: <%= expense.name %></div>
           <div>Transaction Amount: <%= expense.amount %>$</div>
         </div>
@@ -28,7 +31,7 @@
     </div>
   </div>
 
-    <div>
-        <%= link_to 'Add a New Transaction', new_group_expense_path(params[:group_id]) %>
+    <div class="d-flex justify-content-center align-items-center border border-success ms-5 me-5">
+        <%= link_to 'Add a New Transaction', new_group_expense_path(params[:group_id]), class: "text-success" %>
     </div>
 </div>

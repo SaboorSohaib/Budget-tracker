@@ -1,21 +1,27 @@
-
-<% if user_signed_in? %>
-        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% end %>
-
 <div>
-    <div>
-        <span>You Signed in as: <%= @user.name %></span>
+    <div class="mb-3 ms-2">
+      <% if user_signed_in? %>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-primary'%>
+      <% end %>
+    </div>
+    <div class="ms-3 mb-3">
+        <h6>You Signed in as: <%= @user.name %></h6>
     </div>
 
-    <div>
+    <div class="d-flex flex-column gap-2 mb-3 ms-3 me-3">
         <% @groups.each do |group| %>
-          <div><%= link_to group.name, group_expenses_path(group) %></div>
-          <img src="<%= group.icon %>">
-          <div><%= group.expenses.sum(:amount) %> $</div>
+          <div class="d-flex flex-row gap-3 border border-primary p-1">
+            <div>
+                <img src="<%= group.icon %>">
+            </div>
+            <div>
+                <div><%= link_to group.name, group_expenses_path(group) %></div>
+                <div><%= group.expenses.sum(:amount) %> $</div>
+            </div>
+          </div>
         <% end %>
     </div>
-    <div>
-        <%= link_to 'Add a New Category', new_group_path %>
+    <div class="d-flex justify-content-center align-items-center border border-success ms-5 me-5">
+        <%= link_to 'Add a New Category', new_group_path, class: "text-success"%>
     </div>
 </div>
