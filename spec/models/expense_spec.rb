@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   subject do
     @user = User.create!(name: 'omar', email: 'omar@gmail.com', password: '934043')
-    @expnse = Expense.create!(name: 'Expense 1', amount: 100, author_id: @user.id)
+    @expnse = Expense.create!(name: 'Expense 1', amount: 100, user_id: @user.id)
   end
 
   it 'should test the name attribute' do
