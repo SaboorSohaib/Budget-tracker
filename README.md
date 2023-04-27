@@ -181,6 +181,7 @@ If you like this project you can fork it.
 
 I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microvers for giving me this opportunity to build this project</a>
 
+I would also appreciate Gregoire Vella <a href="https://www.behance.net/gregoirevella"></a> for giving us this opportunity to use this design.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
