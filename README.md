@@ -77,7 +77,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link Comming Soon!]
-
+- Please use this link for icon whenever you want to create a category(https://coffee.alexflipnote.dev/random)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -131,7 +131,7 @@ To run the project, execute the following command:
 
 ### Deployment
 
-- Netlify
+- Render
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
