@@ -11,13 +11,14 @@
           <%= form.label :name %>
           <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
         </div>
-       <div class="mb-3">
-          <%= form.label :icon %>
-          <%= form.text_field :icon, placeholder:'Icon Here!', class:'text-input form-control form-control-lg' %>
-      </div>
-      <div class="mb-3">
+        <div class="mb-3">
+          <label class="btn btn-primary">
+            Upload Icon <%= form.file_field :icon, style: 'display:none;' %>
+          </label>
+        </div>
+        <div class="mb-3">
           <%= form.submit "Save", class: "btn btn-primary" %>
-      </div>
+        </div>
     <% end %>
   </div>
 </div>
