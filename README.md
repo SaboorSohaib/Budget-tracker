@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Blog App</b></h3>
+  <h3><b>Rails Capstone</b></h3>
 
 </div>
 
@@ -12,7 +12,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 
-- [📖 Blog App](#Blog-App)
+- [📖 Rails Capstone](#Rails-Capstone)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -36,7 +36,7 @@
 
 # 📖 Blog App <a name="about-project"></a>
 
-> Blog is a rails app. In this app we can add Post, comments on the posts and like posts.
+> Rails capstone is a web application. You can add categories, transactions for that categories.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -151,8 +151,7 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Enhance design.**
-- **Connect to the Database.** 
+- **Enhance design.** 
 - **Add API endpoits.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
