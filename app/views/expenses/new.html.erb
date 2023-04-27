@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="child mt-4">
+    <div class="mb-3">
+      <%= button_to "Back", authenticated_root_path, method: :get, class: 'btn btn-outline-primary'%>
+    </div>
+    <div class="text-center">
+      <h2>Add a New Transaction</h2>
+    </div>
+      <%= form_with model: @expense, url: group_expenses_path(params[:group_id]) do |form| %>
+        <div class="mb-3">
+          <%= form.label :name %>
+          <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
+        </div>
+        <div class="mb-3">
+          <%= form.label :amount %>
+          <%= form.number_field :amount, placeholder:'Amount Here!', class:'text-input form-control form-control-lg' %>
+        </div>
+        <div class="input-group mb-3">
+          <%= form.label :group_id %>
+          <%= form.select :group_id, options_from_collection_for_select(@groups, :id, :name) %>
+        </div>
+        <div class="mb-3">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+  </div>
+</div>

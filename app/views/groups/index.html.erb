@@ -1,0 +1,39 @@
+<div>
+  <div class="bg-primary nav">
+    <div class="ms-4 mt-3">
+      <% if user_signed_in? %>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="ms-5 mt-3">
+      <h2 class="text-white">Categories</h2>
+    </div>
+  </div>
+  <div class="ms-3 mb-3 mt-3">
+    <h6>You Signed in as: <%= @user.name %></h6>
+  </div>
+
+  <div class="d-flex flex-column gap-2 mb-3 ms-3 me-3">
+      <% @groups.each do |group| %>
+        <div class="d-flex flex-row gap-3 border border-primary p-3">
+          <div>
+            <% if group.icon.attached? %>
+              <img src="<%=(url_for(group.icon)) %>", alt="group-image", style="width:60px; height:60px;">
+            <% end %>
+          </div>
+          <div class="d-flex gap-5">
+            <div>
+              <div><%= link_to group.name, group_expenses_path(group) %></div>
+              <div><%= group.created_at.strftime("%d %b %Y") %></div>
+            </div>
+            <div class="mt-3 ms-5">
+               <div>$ <%= group.expenses.sum(:amount) %></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+  <div class="d-flex justify-content-center align-items-center border border-success ms-5 me-5">
+    <%= link_to 'Add a New Category', new_group_path, class: "text-success"%>
+  </div>
+</div>

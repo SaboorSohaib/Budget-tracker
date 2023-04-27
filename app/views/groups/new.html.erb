@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="child mt-4">
+    <div class="mb-3">
+      <%= button_to "Back", authenticated_root_path, method: :get, class: 'btn btn-outline-primary'%>
+    </div>
+    <div class="text-center">
+      <h2>Add a New Category </h2>
+    </div>
+    <%= form_with model: @group, url: groups_path do |form| %>
+        <div class="mb-3">
+          <%= form.label :name %>
+          <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
+        </div>
+        <div class="mb-3">
+          <label class="btn btn-primary">
+            Upload Icon <%= form.file_field :icon, style: 'display:none;' %>
+          </label>
+        </div>
+        <div class="mb-3">
+          <%= form.submit "Save", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+  </div>
+</div>
