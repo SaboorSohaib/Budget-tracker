@@ -33,3 +33,7 @@ a {
   padding: 3rem;
   border-radius: 5px;
 }
+
+.nav {
+  height: 12vh;
+}

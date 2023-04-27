@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="child">
+  <div class="child mt-4">
     <div class="mb-3">
       <%= button_to "Back", authenticated_root_path, method: :get, class: 'btn btn-outline-primary'%>
     </div>
@@ -8,8 +8,8 @@
     </div>
     <%= form_with model: @group, url: groups_path do |form| %>
         <div class="mb-3">
-            <%= form.label :name %>
-            <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
+          <%= form.label :name %>
+          <%= form.text_field :name, placeholder:'Name Here!', class:'text-input form-control form-control-lg' %>
         </div>
        <div class="mb-3">
           <%= form.label :icon %>
