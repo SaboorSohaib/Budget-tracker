@@ -34,7 +34,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Rails Capstone <a name="about-project"></a>
 
 > Rails capstone is a web application. You can add categories, transactions for that categories.
 
