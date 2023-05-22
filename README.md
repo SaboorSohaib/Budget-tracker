@@ -36,8 +36,7 @@
 
 # 📖 Rails Capstone <a name="about-project"></a>
 
-> Rails capstone is a web application. You can add categories, transactions for that categories.
-
+> Rails Capstone is a web application. You can add categories and many transactions for that categories.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
