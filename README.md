@@ -36,7 +36,7 @@
 
 # 📖 Rails Capstone <a name="about-project"></a>
 
-> Budget Tracker is a web application that allows users to add categories and add expenses to the  transactions.
+> Budget Tracker is a user-friendly web application designed to help users effortlessly add categories and track expenses, providing a streamlined and efficient way to manage their financial transactions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,7 +67,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- We can add, remove, update and display blogs.
+- User can add categories and transactions.
 - It has user authentication.
 - It is well designed.
 
@@ -122,7 +122,7 @@ To run the project, execute the following command:
 
 ### Run tests
 
-- rspec.
+- rspec
 
 ### Check Linter 
 
@@ -178,7 +178,7 @@ If you like this project you can fork it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microvers for giving me this opportunity to build this project</a>
+I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microverse for giving me this opportunity to build this project</a>
 
 I would also appreciate Gregoire Vella <a href="https://www.behance.net/gregoirevella"></a> for giving us this opportunity to use this design.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
